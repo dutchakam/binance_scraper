@@ -130,7 +130,7 @@ def run_etl_process(page, bp: BinancePipeline, tab: str) -> pd.DataFrame:
     return records
 
 
-def send_dfs_in_email(df):
+def send_dfs_in_email(df: pd.DataFrame) -> None:
     e = EmailSender()
     e.run_server()
     e.get_dataframe(df)
