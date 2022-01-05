@@ -6,11 +6,11 @@ import os
 
 
 class EmailSender:
-    contacts = r'C:\Users\Admin\PythonMiscFiles\reminder_email_txtfiles\email_list.txt'
-    my_message = r'C:\Users\Admin\PythonMiscFiles\reminder_email_txtfiles\binance_email_template.txt'
-    my_address = 'alexanderdutchak@yahoo.com'
+    contacts = r'path\to\contacts\file.txt'
+    my_message = r'path\to\message\template.txt'
+    my_address = 'email@site.com'
     my_pass = os.environ.get('P_EMAIL')
-    s = smtplib.SMTP(host='smtp.mail.yahoo.com', port=587)  # server
+    s = smtplib.SMTP(host='smtp.mail.site.com', port=587)  # server
     msg = MIMEMultipart()  # message
     email_list = None  # list
     name_list = None  # list
