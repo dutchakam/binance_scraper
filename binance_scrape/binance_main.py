@@ -136,13 +136,13 @@ def email_dataframe(df):
     """sends our scraped data in an email to a specified recipient in the form of a dataframe
     added to a string template"""
 
-    username = 'alexanderdutchak@yahoo.com'  # set variables here, or read in contacts from a text file
-    recipient = 'alexanderdutchak@gmail.com'
-    password = os.environ.get('P_EMAIL')
+    username = 'sender@email.com'  # set variables here, or read in contacts from a text file
+    recipient = 'recipient@email.com'
+    password = os.environ.get('PASSWORD')
     host = 'smtp.mail.yahoo.com'
     port = 587
     subject = 'DAILY BINANCE SCRAPE RESULTS'
-    template_path = r'C:\Users\Admin\PythonMiscFiles\reminder_email_txtfiles\binance_email_template.txt'
+    template_path = r'C:\Path\To\text\file.txt'
 
     with open(template_path, 'r', encoding='utf-8') as template_file:  # get the template from a text file
         content = template_file.read()
