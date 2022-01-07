@@ -28,7 +28,7 @@ class Mailer:
         s.ehlo()
         s.starttls()
         s.ehlo()
-        # self.s.set_debuglevel(1)
+        # s.set_debuglevel(1)
         s.login(self.username, self.password)
         s.send_message(msg)
         print('\nEmail sent successfully!\n')
